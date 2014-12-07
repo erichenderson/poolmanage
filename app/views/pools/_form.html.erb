@@ -1,0 +1,41 @@
+<%= form_for(@pool) do |f| %>
+  <% if @pool.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pool.errors.count, "error") %> prohibited this pool from being saved:</h2>
+
+      <ul>
+      <% @pool.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :poolname %><br>
+    <%= f.text_field :poolname %>
+  </div>
+  <div class="field">
+    <%= f.label :addressline1 %><br>
+    <%= f.text_field :addressline1 %>
+  </div>
+  <div class="field">
+    <%= f.label :addressline2 %><br>
+    <%= f.text_field :addressline2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :belongsto %><br>
+    <%= f.text_field :belongsto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

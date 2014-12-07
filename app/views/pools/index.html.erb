@@ -1,0 +1,35 @@
+<h1>Listing pools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Poolname</th>
+      <th>Addressline1</th>
+      <th>Addressline2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Belongsto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pools.each do |pool| %>
+      <tr>
+        <td><%= pool.poolname %></td>
+        <td><%= pool.addressline1 %></td>
+        <td><%= pool.addressline2 %></td>
+        <td><%= pool.city %></td>
+        <td><%= pool.state %></td>
+        <td><%= pool.belongsto %></td>
+        <td><%= link_to 'Show', pool %></td>
+        <td><%= link_to 'Edit', edit_pool_path(pool) %></td>
+        <td><%= link_to 'Destroy', pool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pool', new_pool_path %>

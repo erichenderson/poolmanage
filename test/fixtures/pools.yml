@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poolname: MyString
+  addressline1: MyString
+  addressline2: MyString
+  city: MyString
+  state: MyString
+  belongsto: MyString
+
+two:
+  poolname: MyString
+  addressline1: MyString
+  addressline2: MyString
+  city: MyString
+  state: MyString
+  belongsto: MyString
